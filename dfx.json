@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "lavanya_backend": {
+      "main": "src/lavanya_backend/main.mo",
+      "type": "motoko"
+    },
+    "lavanya_frontend": {
+      "dependencies": [
+        "lavanya_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/lavanya_frontend/src/index.html"
+      },
+      "source": [
+        "src/lavanya_frontend/assets",
+        "dist/lavanya_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
